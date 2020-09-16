@@ -1,0 +1,58 @@
+Command:
+  Stats:
+    Desc: Pokaż swoje statystyki.
+    Usage: '[Gracz]'
+  Boosters:
+    Desc: Show personal job boosters.
+    Usage: '[Gracz]'
+  AddBooster:
+    Desc: Add personal booster to a player.
+    Usage: <Gracz> <czynność> <ilość pieniędzy> <exp> <minuty>
+    Error:
+      InvalidJob: '&cProvided job(s) are all invalid!'
+    Done:
+      From: '&aGiven personal &e%job% &ex%mult-money% Money&a, &ex%mult-exp% Exp &abooster
+        to &e%player%&a for &e%expire%&a'
+      To: '&aOtrzymałeś/łaś za &e%job% &ex%mult-money%$, &ex%mult-exp%
+        Exp &abooster for &e%expire%&a!'
+  AddExp:
+    Desc: Dodaje Xp czynności gracza .
+    Usage: <gracz> <praca> <ilość>
+    Done: '&aDodano &f%exp% &aexp za &f%job% &aDla gracza &f%player%&a.'
+  AddLevel:
+    Desc: Dodaj Poziom(my) do czynności gracza.
+    Usage: <gracz> <czynność> <ilość>
+    Done: '&aDodano &f%amount% &aPoziom(my) do &f%job% &aCzyności dla gracza &f%player%&a.'
+Leveling:
+  Stats:
+    List:
+    - '&8&m━━━━━━━━━━&8&l[ &e&lMoneyHunters &7- &6&lSStatystyki gracza &c&l%player% &8&l]&8&m━━━━━━━━━━'
+    - '%jobs%'
+    Praca: '&6» &e%name% &7[&aLvl %lvl%&7]: &6%exp%&7/&6%max%&7, &eMnożnik: &6x%mult%'
+  GainExp: '[ACTION_BAR] &6*** &eDostałeś &f%exp% Xp &eza &7%job%&6***'
+  LevelUp: '[ACTION_BAR] &6*** &eTwój/ja &7%job% &eZostała ulepszona do poziomu &c%lvl%! &6***'
+Booster:
+  Global:
+    Notify: '&6*** &eThere is active global &6&lBooster&e! &c&lHover for details!
+      &6***'
+    Start: '&6*** &eGlobal &6&lBooster &eis activated! &c&lHover for details! &6***'
+    End: '&4*** &cGlobal &6&lBooster &cis deactivated! &4***'
+    Hint:
+    - '&6Mnożnik Xp: &ex%multiplier-exp%'
+    - '&6Mnożnik pieniężny : &ex%multiplier-money%'
+    - '&c&lCzas: &f%time%'
+    - '&7'
+    - '&a&lAffected Jobs:'
+    - '&2▸ &f%jobs%'
+  Personal:
+    List:
+    - '&8&m━━━━━━━━━━&8&l[ &e&lMoneyHunters &7- &6&lBoosters of &c&l%player% &8&l]&8&m━━━━━━━━━━'
+    - '&6» &e%job%: &eMoney Boost: &6x%mult-money%&7, &eExp Boost: &6x%mult-exp%&7,
+      &eExpires in: &6%expire%'
+    None: '&cNo boosters.'
+Money:
+  Pickup: '[ACTION_BAR] &2*** &aPodniosłeś &f%money%$&a! Nowy balans: &f%balance%$
+    &2***'
+  Lost: '[ACTION_BAR] &4*** &cStraciłeś &f%money%$&c! Nowy balans: &f%balance%$ &4***'
+Other:
+  NoJob: '&cTa czynność &7%id% &cnie nie istnieje.'
